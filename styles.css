@@ -1,0 +1,58 @@
+/*Logo Styling*/
+img {
+    max-width: 250px;
+    height: auto;
+}
+
+/* Video Section */
+.video-section {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1;
+}
+  
+/* Overlay for transparency */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 0; 
+}
+
+/* Tagline Styling */
+.tagline {
+    position: absolute;
+    top: 35%; /* Adjust vertical alignment */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 1; /* Place above overlay */
+}
+
+.tagline h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 170px;
+    color: white;
+}
+
+.tagline p {
+    font-size: 2.2rem;
+    margin-top: 50px;
+}
+  
