@@ -1,58 +1,620 @@
-/*Logo Styling*/
-img {
-    max-width: 250px;
+/* Ensure the video fills the screen */
+#background-video {
+    position: fixed;  /* Keep the video fixed in place */
+    top: 0;
+    left: 0;
+    width: 100%; /* Fill the full width of the screen */
+    height: 100%; /* Fill the full height of the screen */
+    object-fit: cover; /* Ensure the video covers the entire screen without distortion */
+    z-index: -3; /* Place the video behind all content */
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Inria Serif', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    position: relative; /* Make sure other elements are positioned above the video */
+}
+
+/* Header and Logo/Nav Container */
+header {
+    position: relative; /* Fix the header at the top */
+    top: 0;
+    left: 0;
+    width: 97%;
+    z-index: 1000; /* Ensure it stays above the video */
+    background-color: transparent; 
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: none;
+    margin: 0; /* Ensure no margin affects header */
+    margin-bottom: 0px;
+}
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.logo {
+    width: 300px;
+    /* Adjust size as needed */
     height: auto;
+    border-radius: 10px;
+    /* Curved edges */
+    overflow: hidden;
+    /* Ensures the rounded effect is applied */
+    background-color: #FFFFFF;
+    margin-left: 4px;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    display: flex;
+    background: transparent; /* No background */
+    padding: 10px 20px;
+    border-radius: 15px; /* Curved edges around the entire nav */
+    align-items: center;
+    gap: 15px; /* Space between links */
+}
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-bar li {
+    display: flex;
+    text-align: center;
+    position: relative;
+}
+
+/* Separator Line Between Links */
+.nav-bar li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -8px; /* Position it between links */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px; /* Thin vertical line */
+    height: 60%;
+    background: rgba(255, 255, 255, 0.5); /* Faded white line */
+}
+
+.nav-bar a {
+    font-family: 'Inria Serif', serif;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 10px;
+}
+
+.nav-bar a:hover {
+    text-decoration: none;
+    color: #fff;
+    background-image: linear-gradient(45deg, #0F4E8A, #ec6329);
+    border-radius: 10px;
+    padding: 10px 15px;
+}
+
+/* Icons Styling */
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icons i {
+    border-radius: 10px;
+    /* Rounded edges */
+    transition: all 0.3s ease-in-out;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+    width: 50px;
+    /* Set a fixed width */
+    height: 50px;
+    /* Set a fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons i:hover {
+    color: #fff;
+    /* Change text color */
+    background-color: #ec6329;
+    /* Box color */
+    border-radius: 10px;
+    /* Smooth curved edges */
+}
+
+/* Bring the location icon down */
+.icons .fa-map-marker-alt {
+    margin-top: 5px;
+    font-size: 30px;
+}
+
+/* Rotate the phone icon */
+.icons .fa-phone-alt {
+    transform: rotate(90deg);
+    /* Rotates the icon by 180 degrees */
+    margin-top: 5px;
+}
+
+/* Icon Styling */
+#menu-icon {
+    font-size: 31px;
+    margin-top: 5px;
+    margin-right: 25px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    /* Rounded edges */
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    width: 50px;
+    /* Set a fixed width */
+    height: 50px;
+    /* Set a fixed height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-icon:hover {
+    color: #fff;
+    /* Change text color */
+    background-color: #ec6329;
+    /* Box color */
+    border-radius: 10px;
+    /* Smooth curved edges */
+}
+
+/* Smooth transition when the icon changes */
+#menu-icon.rotated {
+    transform: rotate(180deg);
+    /* Rotate the icon */
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 100px;
+    /* Adjust as needed */
+    right: 20px;
+    width: 200px;
+    /* Adjust width */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Semi-transparent black background */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.hamburger-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hamburger-menu ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.hamburger-menu ul li a {
+    text-decoration: none;
+    color: white;
+    /* White text color */
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.hamburger-menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Show menu when active */
+.hamburger-menu.active {
+    display: block;
 }
 
 /* Video Section */
-.video-section {
+.video-container {
     position: relative;
-    width: 100%;
-    height: 80vh;
+    width: 95%; /* Adjust width for space around the video */
+    height: 75vh; /* Adjust height to your preference */
     overflow: hidden;
+    margin: 0px auto; /* Center the video container horizontally and give it space from top (80px to match header height) */
+    margin-bottom: 0px;
+    border-radius: 15px; /* Rounded edges */
+    border: 5px solid black; /* Black border */
+    box-sizing: border-box; /* Include border in the width/height calculation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+/* Video Background */
 .video-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; 
-    z-index: -1;
-}
-  
-/* Overlay for transparency */
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 0; 
+    object-fit: cover;
+    z-index: -1; /* Keep the video behind other content */
 }
 
-/* Tagline Styling */
-.tagline {
-    position: absolute;
-    top: 35%; /* Adjust vertical alignment */
-    left: 50%;
-    transform: translate(-50%, -50%);
+.services-section {
     text-align: center;
-    color: #fff;
-    z-index: 1; /* Place above overlay */
+    font-family: 'Inria Serif', serif;
+    margin-top: 50px;
+    padding: 40px 20px;
+    background: rgba(0, 0, 0, 0.3);
 }
 
-.tagline h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-top: 170px;
+.services-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.services-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Horizontal Scrolling */
+.services-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px;
+    white-space: nowrap;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer & Edge */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.services-container::-webkit-scrollbar {
+    display: none;
+}
+
+.service-card {
+    min-width: 300px;
+    max-width: 400px;
+    background-image: linear-gradient(45deg, #0b355d, #4e7aa3);
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card h2 {
+    font-size: 1.3em;
+    color: #ffffff;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.service-card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.53);
+}
+
+.about-section {
+    position: relative;
+    text-align: center; /* This centers the heading and other content inside the section */
+    font-family: 'Inria Serif', serif;
+    max-width: 800px;
+    margin: 0px auto;
+    margin-bottom: 30px;
+    padding: 50px;
+    border-radius: 10px;
     color: white;
 }
 
-.tagline p {
-    font-size: 2.2rem;
-    margin-top: 50px;
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
 }
-  
+
+.about-text {
+    flex: 1;
+    padding-right: 20px; /* Space between text and image */
+    font-size: 20px;
+}
+
+/* Center the heading in the section */
+.about-section h1 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px; /* Space between heading and text */
+    width: 100%; /* Ensure the heading spans the full width of the section */
+}
+
+.read-more-btn {
+    display: inline-block;
+    background-image: linear-gradient(45deg, #ec6329, #f79c42);
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 2;
+    text-align: center;
+}
+
+.read-more-btn:hover {
+    background-image: linear-gradient(45deg, #0F4E8A, #ec6329);
+}
+
+.sectors-section {
+    text-align: center;
+    font-family: 'Inria Serif', serif;
+    padding: 0px;
+    max-height: 500px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    max-width: 900px;
+    margin: 0px auto;
+    min-height: 80vh;
+}
+
+.image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+/* Flip Card Effect */
+.flip-card {
+    width: 400px;
+    height: 300px;
+    perspective: 1000px; /* Creates 3D effect */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+/* Front Side */
+.flip-card-front {
+    color: black;
+    margin-left: 10px;
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.flip-card-front h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Back Side */
+.flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+    padding: 20px;
+    text-align: center;
+    width: 80%; /* Reduce the width */
+    max-width: 300px; /* Limit max width */
+}
+
+/* Read More Button */
+.read-more {
+    font-family: 'Inria Serif', serif;
+    display: inline-block;
+    background-image: linear-gradient(45deg, #ec6329, #f79c42);
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-top: 0px;
+    margin-left: 30px;
+    transition: background-color 0.3s ease-in-out;
+    border: none;
+    outline: none;
+}
+
+.read-more:hover {
+    background-image: linear-gradient(45deg, #0F4E8A, #ec6329);
+}
+
+/* Clients Section */
+.clients-section {
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 40px;
+    padding: 40px 0;
+    /* Light background for contrast */
+}
+
+/* Heading of Clients Section */
+.clients-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-family: 'Inria Serif', serif;
+    color: #ffffff;
+}
+
+/* Container for the logos */
+.clients-logos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    /* Hide overflow to make the animation work */
+    position: relative;
+}
+
+/* Animation for scrolling logos */
+.clients-logos-wrapper {
+    display: flex;
+    animation: scrollLogos 20s linear infinite;
+    /* Adjust speed here */
+}
+
+/* Each client logo */
+.client-logo {
+    width: 100px;
+    /* Adjust the size of the logos */
+    height: auto;
+    margin-right: 50px;
+    /* Space between logos */
+}
+
+/* Keyframe animation for the scroll effect */
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Move logos to the left */
+    }
+}
+
+#info {
+    background-color: transparent;
+    color: #FFFFFF;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.business-hours,
+.address,
+.company,
+.social-media {
+    width: 23%;
+    /* Adjust the width of each column */
+    margin: 0 10px;
+    /* Add space between the columns */
+    box-sizing: border-box;
+    /* To include padding and borders within the width */
+}
+
+/* Reduce line spacing in the text sections */
+.business-hours p,
+.address p,
+.company p {
+    line-height: 0.5;
+    /* Adjust this value to make text closer */
+}
+
+.social-media a {
+    margin-right: 15px;
+    /* Adds space between each link */
+    font-size: 1.2em;
+    /* Adjust size if needed */
+}
+
+.social-media a:last-child {
+    margin-right: 0;
+    /* Remove margin from the last link */
+}
+
+.social-media i {
+    color: #FFFFFF;
+}
+
+h2 {
+    margin-bottom: 10px;
+    /* Add space below headings */
+}
+
+footer {
+    background-color: #D95821;
+    font-family: 'Inria Serif', serif;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
