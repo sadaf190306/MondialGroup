@@ -57,3 +57,46 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(section);
     });
 });
+
+function animateCounters() {
+    const counters = document.querySelectorAll('.counter');
+    const achievementSection = document.querySelector('.achievements');
+    let animated = false;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !animated) {
+                animated = true;
+                
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const duration = 2000; // 2 seconds
+                    const startTime = performance.now();
+                    
+                    const updateCounter = (currentTime) => {
+                        const elapsedTime = currentTime - startTime;
+                        const progress = Math.min(elapsedTime / duration, 1);
+                        const value = Math.floor(progress * target);
+                        
+                        counter.textContent = value;
+                        
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            // Add '+' if element has it
+                            if (counter.parentElement.textContent.includes('+')) {
+                                counter.textContent = target + '+';
+                            }
+                        }
+                    };
+                    
+                    requestAnimationFrame(updateCounter);
+                });
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    observer.observe(achievementSection);
+}
+
+document.addEventListener('DOMContentLoaded', animateCounters);
