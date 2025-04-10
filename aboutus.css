@@ -52,7 +52,7 @@
 
 .about-main {
     padding: 50px 5%;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .about-container {
@@ -64,7 +64,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 50px;
-    background: rgba(15, 78, 138, 0.7);
+    background: #ec6329;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -88,7 +88,7 @@
 .about-text h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #ec6329;
+    color: #ffffff;
 }
 
 .about-text h2 i {
@@ -282,10 +282,18 @@
 
 /* Workforce Section */
 
+.workforce-section {
+    margin-top: 0px;
+}
+
 .workforce-content {
     display: flex;
     align-items: center;
     gap: 50px;
+}
+
+.section-header h2 {
+    color: white;
 }
 
 .workforce-image {
