@@ -1,0 +1,38 @@
+.careers-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f961;
+    text-align: center;
+}
+
+.careers-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.careers-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.careers-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.2rem;
+}
+
+.career-cta a {
+    color: #0077cc;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.career-cta a:hover {
+    color: #0055aa;
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Logistics Services | Your Company Name</title>
+    <link rel="stylesheet" href="css/logistics.css" />
+    <link rel="stylesheet" href="css/basicstyles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div id="home" class="logo-nav-container">
+            <img src="Images/Logo no bg.png" alt="Mondial Group Logo" class="logo" />
+
+            <!-- Navigation Bar -->
+            <div class="nav-bar-container">
+                <nav class="nav-bar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#sectors">Our Sectors</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Icons -->
+            <div class="icons">
+                <a href="contact.html"><i class="fas fa-map-marker-alt"></i></a>
+                <a href="contact.html"></a><i class="fas fa-phone-alt"></i>
+                <i
+                  id="menu-icon"
+                  class="fa fa-bars"
+                  onclick="toggleMenu(); changeIcon(this);"
+                ></i>
+                <!-- Hamburger Icon -->
+            </div>
+        </div>
+    </header>
+
+    <video autoplay muted loop id="background-video">
+        <source src="Videos/bg.mp4" type="video/mp4" />
+        <!-- Add fallback content in case the video doesn't load -->
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Hamburger Navigation Menu -->
+    <div id="hamburger-menu" class="hamburger-menu">
+        <ul>
+            <li><a href="logistics.html">Logistics</a></li>
+            <li><a href="travel_tourism.html">Travel & Tourism</a></li>
+            <li><a href="https://www.mondial.ae/trader.html" target="_blank">Trading</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <main class="logistics-main">
+        <section class="section hero-section">
+            <div class="hero-content">
+                <h1>Global Logistics Solutions</h1>
+                <p>Efficient, reliable, and tailored to your business needs</p>
+                <a href="#services" class="cta-button">Explore Services</a>
+            </div>
+        </section>
+
+        <section id="services" class="section services-section">
+            <div class="section-header">
+                <h2>Our Logistics Services</h2>
+                <p>Comprehensive solutions for all your supply chain needs</p>
+            </div>
+
+            <div class="services-container">
+                <!-- Service cards will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <section id="logistics-details" class="section logistics-details-section">
+            <div class="section-header">
+                <h2>Logistics</h2>
+                <p><strong>FREIGHT FORWARDING (AIR, OCEAN & LAND) / CHARTERING / WAREHOUSING / EVENT LOGISTICS HANDLING / INDUSTRIAL PROJECTS HANDLING</strong></p>
+            </div>
+        
+            <div class="logistics-description">
+                <p>Justifiably, our successful growth since being established in 1994, has been attributed to a well-defined goal, strategic planning, dynamic leadership and a team of self-motivated and well-experienced professionals, trained to give the best in ultimate customer satisfaction. The organizational structure is meticulously crafted with the division of labor principle, wherein a seasoned and proficient management team oversees the various departments with expertise and experience.</p>
+                
+                <h3>OUR SCOPE OF SERVICES</h3>
+                <ul>
+                    <li>Air / Ocean clearing and forwarding</li>
+                    <li>Events Cargo Handling</li>
+                    <li>Tailored Freight Solutions for Sports Events</li>
+                    <li>Warehousing & Distribution</li>
+                    <li>Packing and Removals</li>
+                    <li>Bonded Trucking & Special World-Wide Door-to-door Delivery</li>
+                    <li>Exhibition and Industrial Project Shipment Handling</li>
+                    <li>Air / Ocean Charter Services / Ground handling</li>
+                </ul>
+        
+                <p>A team of seasoned professionals, with extensive experience in the field, manages the aforementioned tasks. We maintain strong affiliations with Customs, AIR & SEA Port Authorities, Airlines and Shipping Agents, as well as Freight Forwarders, enabling us to seamlessly and efficiently facilitate the movement of cargo and passengers to the utmost satisfaction of our clients and agents.</p>
+        
+                <p>We provide cost-effective and expeditious import/export freight and air charter services, serving nearly any country, facilitated by our dedicated commitment to regular operations.</p>
+        
+                <p>Our success is largely attributed to continuous assessment and a 24-hour responsiveness to our customer's needs. Serving a diverse clientele ranging from small enterprises to national and high-profile multinational companies, we maintain confidence in the future and remain dedicated to delivering unparalleled value for money and top-notch service quality. We prioritize our customers as the cornerstone of our business, fostering a partnership approach wherein their success is intricately tied to our own.</p>
+            </div>
+        </section>        
+
+        <section id="info" role="companyInfo" class="section">
+            <div class="info-container">
+                <!--Business hours-->
+                <div class="business-hours">
+                    <h2>BUSINESS HOURS</h2>
+                    <p>8.00 AM to 6.00 PM - Monday</p>
+                    <p>8.00 AM to 6.00 PM - Tuesday</p>
+                    <p>8.00 AM to 6.00 PM - Wednesday</p>
+                    <p>8.00 AM to 6.00 PM - Thursday</p>
+                    <p>8.00 AM to 6.00 PM - Friday</p>
+                    <p>8.00 AM to 4.00 PM - Saturday</p>
+                    <p>Holiday - Sunday</p>
+                </div>
+
+                <!--Company-->
+                <div class="company">
+                    <h2>COMPANY</h2>
+                    <p>Home</p>
+                    <p>About Us</p>
+                    <p>Contact Us</p>
+                    <p>Services</p>
+                </div>
+
+                <!--Address-->
+                <div class="address">
+                    <h2>ADDRESS</h2>
+                    <p>P.O.BOX 22974</p>
+                    <p>DUBAI INTERNATIONAL AIRPORT</p>
+                    <p>ROAD, Dubai - U.A.E</p>
+                    <p>Phone: +971 4 2869203</p>
+                    <p>Fax: +971 4 2869204</p>
+                    <p>Mail: admin1@mondial.ae</p>
+                </div>
+
+                <!-- Social Media Icons -->
+                <div class="social-media">
+                    <h2>OUR LINKS</h2>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section footerr">
+            <footer>
+                <p> Copyright &copy; 2023 Mondial Group. All Rights Reserved. </p>
+                <p> Designed by <b> TechSmart </b></p>
+            </footer>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/basicstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
+    <title>Mondial Group</title>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div id="home" class="logo-nav-container">
+            <img src="Images/Logo no bg.png" alt="Mondial Group Logo" class="logo">
+
+            <!-- Navigation Bar -->
+            <div class="nav-bar-container">
+                <nav class="nav-bar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#sectors">Our Sectors</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Icons -->
+            <div class="icons">
+                <a href="contact.html"><i class="fas fa-map-marker-alt"></i></a>
+                <a href="contact.html"></a><i class="fas fa-phone-alt"></i>
+                <i id="menu-icon" class="fa fa-bars" onclick="toggleMenu(); changeIcon(this);"></i>
+                <!-- Hamburger Icon -->
+            </div>
+        </div>
+    </header>
+
+    <video autoplay muted loop id="background-video">
+        <source src="Videos/bg.mp4" type="video/mp4">
+        <!-- Add fallback content in case the video doesn't load -->
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Hamburger Navigation Menu -->
+    <div id="hamburger-menu" class="hamburger-menu">
+        <ul>
+            <li><a href="logistics.html">Logistics</a></li>
+            <li><a href="travel_tourism.html">Travel & Tourism</a></li>
+            <li><a href="https://www.mondial.ae/trader.html" target="_blank">Trading</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <p>Please feel free to contact us if you have any questions, doubts or suggestions about our company and
+                    services provided from us.<br><strong>Thank You</strong></p>
+
+                <form id="contactForm">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <input type="text" id="subject" name="subject" placeholder="Subject">
+                    <input type="tel" id="mobile" name="mobile" placeholder="Mobile Number">
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <div id="formMessage" class="form-message"></div>
+
+            </div>
+
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1zdn2NLxDWnaUZ74zeI8AAW2zMac&ehbc=2E312F"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </div>
+
+        <script>
+            const form = document.getElementById('contactForm');
+            const messageDiv = document.getElementById('formMessage');
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+
+                const data = {
+                    name: document.getElementById('name').value.trim(),
+                    email: document.getElementById('email').value.trim(),
+                    subject: document.getElementById('subject').value.trim(),
+                    mobile: document.getElementById('mobile').value.trim(),
+                    message: document.getElementById('message').value.trim(),
+                };
+
+                try {
+                    const response = await fetch('http://localhost:3000/api/contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data),
+                    });
+
+                    const result = await response.json();
+
+                    if (response.ok) {
+                        messageDiv.textContent = result.message || "Your message has been sent successfully!";
+                        messageDiv.className = 'form-message success';
+                        form.reset();
+                    } else {
+                        messageDiv.textContent = result.error || "There was a problem sending your message.";
+                        messageDiv.className = 'form-message error';
+                    }
+                } catch (error) {
+                    messageDiv.textContent = "Failed to send message. Please try again later.";
+                    messageDiv.className = 'form-message error';
+                    console.error('Error:', error);
+                }
+            });
+        </script>
+
+
+    </section>
+
+    <section id="info" role="companyInfo">
+        <div class="info-container">
+            <!--Business hours-->
+            <div class="business-hours">
+                <h2>BUSINESS HOURS</h2>
+                <p>8.00 AM to 6.00 PM - Monday</p>
+                <p>8.00 AM to 6.00 PM - Tuesday</p>
+                <p>8.00 AM to 6.00 PM - Wednesday</p>
+                <p>8.00 AM to 6.00 PM - Thursday</p>
+                <p>8.00 AM to 6.00 PM - Friday</p>
+                <p>8.00 AM to 4.00 PM - Saturday</p>
+                <p>Holiday - Sunday</p>
+            </div>
+
+            <!--Company-->
+            <div class="company">
+                <h2>COMPANY</h2>
+                <p>Home</p>
+                <p>About Us</p>
+                <p>Contact Us</p>
+                <p>Services</p>
+            </div>
+
+            <!--Address-->
+            <div class="address">
+                <h2>ADDRESS</h2>
+                <p>P.O.BOX 22974</p>
+                <p>DUBAI INTERNATIONAL AIRPORT</p>
+                <p>ROAD, Dubai - U.A.E</p>
+                <p>Phone: +971 4 2869203</p>
+                <p>Fax: +971 4 2869204</p>
+                <p>Mail: admin1@mondial.ae</p>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                <h2>OUR LINKS</h2>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="footerr">
+        <footer>
+            <p> Copyright &copy; 2023 Mondial Group. All Rights Reserved. </p>
+            <p> Designed by <b> TechSmart </b></p>
+        </footer>
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

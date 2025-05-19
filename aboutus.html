@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="aboutus.css">
-    <link rel="stylesheet" href="basicstyles.css">
+    <link rel="stylesheet" href="css/aboutus.css">
+    <link rel="stylesheet" href="css/basicstyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
     <title>About Us | Mondial Group</title>
 </head>
+
 <body>
+
     <!-- Header Section -->
     <header>
         <div class="logo-nav-container">
@@ -19,101 +22,110 @@
             <div class="nav-bar-container">
                 <nav class="nav-bar">
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#sectors">Our Sectors</a></li>
-                        <li><a href="#services">Services</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#sectors">Our Sectors</a></li>
+                        <li><a href="index.html#services">Services</a></li>
                     </ul>
                 </nav>
             </div>
 
+
             <!-- Icons -->
             <div class="icons">
-                <i class="fas fa-map-marker-alt"></i>
-                <i class="fas fa-phone-alt"></i>
-                <i id="menu-icon" class="fa fa-bars" onclick="toggleMenu(); changeIcon(this);"></i>
-                <!-- Hamburger Icon -->
+                <a href="contact.html"><i class="fas fa-map-marker-alt"></i></a>
+                <a href="contact.html"></a><i class="fas fa-phone-alt"></i>
+                <i id="menu-icon" class="fa fa-bars" onclick="toggleMenu();"></i>
             </div>
         </div>
     </header>
 
+    <!-- Background Video Section -->
     <video autoplay muted loop id="background-video">
         <source src="Videos/bg.mp4" type="video/mp4">
-        <!-- Add fallback content in case the video doesn't load -->
         Your browser does not support the video tag.
     </video>
 
-    <!-- Navigation (Hamburger) Menu Section -->
+    <!-- Hamburger Navigation Menu -->
     <div id="hamburger-menu" class="hamburger-menu">
         <ul>
-            <li><a href="#logistics">Logistics</a></li>
-            <li><a href="#tourism">Travel & Tourism</a></li>
-            <li><a href="#trading">Trading</a></li>
-            <li><a href="#careers">Careers</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="logistics.html">Logistics</a></li>
+            <li><a href="travel_tourism.html">Travel & Tourism</a></li>
+            <li><a href="https://www.mondial.ae/trader.html" target="_blank">Trading</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
 
-    <!-- Hero Section with Background Image -->
-<section class="about-hero">
-    <!-- Background image will be added via CSS -->
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-        <h1>OUR STORY</h1>
-        <p>Established in 1994, Mondial Group has emerged as a dynamic conglomerate headquartered in Dubai, strategically located next to Dubai Terminal 1 Airport. With a rich history spanning nearly three decades, our company has successfully diversified its portfolio across key sectors, becoming a powerhouse of profitability and excellence.</p>
-    </div>
-</section>
+    <!-- Hero Section -->
+    <section class="about-hero section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>OUR STORY</h1>
+            <p>Established in 1994, Mondial Group has emerged as a dynamic conglomerate headquartered in Dubai,
+                strategically located next to Dubai Terminal 1 Airport. With a rich history spanning nearly three
+                decades, our company has successfully diversified its portfolio across key sectors, becoming a
+                powerhouse of profitability and excellence.</p>
+        </div>
+    </section>
 
-    <!-- About Content -->
-    <section class="about-main">
+    <!-- About Main Content Section -->
+    <section class="about-main section">
         <div class="about-container">
-            <!-- History -->
+
+            <!-- History Card -->
             <div class="about-card">
                 <div class="about-text">
                     <h2><i class="fas fa-history"></i> OUR HISTORY</h2>
-                    <p>Founded in 1994, Mondial Group began as a logistics specialist near Dubai International Airport. Over the years, we expanded into travel (2006) and trading (2012), becoming a trusted name across industries. Our journey reflects Dubai's own transformation into a global hub.</p>
+                    <p>Founded in 1994, Mondial Group began as a logistics specialist near Dubai International Airport.
+                        Over the years, we expanded into travel (2006) and trading (2012), becoming a trusted name
+                        across industries. Our journey reflects Dubai's own transformation into a global hub.</p>
                 </div>
-                <img src="Images/AbousUs Page/Company History.jpg" alt="Mondial Group History">
+                <img src="Images/AbousUs-Page/Company History.jpg" alt="Mondial Group History">
             </div>
 
-            <!-- Mission -->
+            <!-- Mission Card -->
             <div class="about-card reverse">
-                <img src="Images/AbousUs Page/Mission.jpg" alt="Mondial Group Mission">
+                <img src="Images/AbousUs-Page/Mission.jpg" alt="Mondial Group Mission">
                 <div class="about-text">
                     <h2><i class="fas fa-bullseye"></i> OUR MISSION</h2>
-                    <p>To deliver seamless, innovative solutions that bridge global markets through exceptional logistics, travel experiences, and trading partnerships. We combine local expertise with international standards to create value for our clients.</p>
+                    <p>To deliver seamless, innovative solutions that bridge global markets through exceptional
+                        logistics, travel experiences, and trading partnerships. We combine local expertise with
+                        international standards to create value for our clients.</p>
                 </div>
             </div>
 
-            <!-- Values -->
-            <div class="about-values">
-                <h2><i class="fas fa-star"></i> OUR VALUES</h2>
-                <div class="values-grid">
-                    <div class="value-item">
-                        <i class="fas fa-handshake"></i>
-                        <h3>Integrity</h3>
-                        <p>Ethical business practices at every level</p>
-                    </div>
-                    <div class="value-item">
-                        <i class="fas fa-lightbulb"></i>
-                        <h3>Innovation</h3>
-                        <p>Pioneering solutions for changing markets</p>
-                    </div>
-                    <div class="value-item">
-                        <i class="fas fa-users"></i>
-                        <h3>Client Focus</h3>
-                        <p>Tailored services for unique needs</p>
-                    </div>
-                    <div class="value-item">
-                        <i class="fas fa-globe"></i>
-                        <h3>Global Reach</h3>
-                        <p>Local knowledge, worldwide network</p>
-                    </div>
-                </div>
+        </div>
+    </section>
+
+    <!-- About Values Section -->
+    <section class="about-values section">
+        <h2><i class="fas fa-star"></i> OUR VALUES</h2>
+        <div class="values-grid">
+            <div class="value-item">
+                <i class="fas fa-handshake"></i>
+                <h3>Integrity</h3>
+                <p>Ethical business practices at every level</p>
+            </div>
+            <div class="value-item">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Innovation</h3>
+                <p>Pioneering solutions for changing markets</p>
+            </div>
+            <div class="value-item">
+                <i class="fas fa-users"></i>
+                <h3>Client Focus</h3>
+                <p>Tailored services for unique needs</p>
+            </div>
+            <div class="value-item">
+                <i class="fas fa-globe"></i>
+                <h3>Global Reach</h3>
+                <p>Local knowledge, worldwide network</p>
             </div>
         </div>
     </section>
 
+    <!-- Achievements Section -->
     <section class="achievements">
         <h2><i class="fas fa-trophy"></i> OUR ACHIEVEMENTS</h2>
         <div class="achievements-container">
@@ -157,24 +169,36 @@
     </section>
 
     <!-- Workforce Section -->
-<section class="workforce-section">
-    <div class="workforce-container">
-        <div class="section-header">
-            <h2><i class="fas fa-users"></i> OUR WORKFORCE</h2>
-        </div>
-        
-        <div class="workforce-content">
-            <div class="workforce-image">
-                <img src="Images/AbousUs Page/Mondial Team.jpg" alt="Mondial Group Team">
+    <section class="workforce-section">
+        <div class="workforce-container">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> OUR WORKFORCE</h2>
             </div>
-            <div class="workforce-text">
-                <p>At the heart of our operations, a dedicated team of over <span class="highlight">50 employees</span> at our headquarters forms the driving force behind Mondial Group's commitment to delivering exceptional services. Fueled by a passion for excellence, innovation, and ensuring client satisfaction, we go above and beyond to create impactful service experiences. Our unwavering dedication defines a legacy of success as we continuously evolve, striving to provide top-notch services that cater to the unique needs of diverse industries, ensuring unparalleled value and satisfaction for our clients.</p>
-                
-                <p>In conclusion, Mondial Group stands as a beacon of excellence and innovation since its establishment in 1994. With a dynamic presence in logistics, travel, overseas trading, and education, our strategic headquarters in Dubai serves as the nucleus for our operations. With a rich history, diverse portfolio, and an unwavering commitment to client satisfaction, Mondial Group continues to evolve, leaving an indelible mark on diverse industries. Our dedicated workforce, strategic partnerships, and esteemed clientele reflect our journey of success, setting industry standards and shaping the future of global business.</p>
+
+            <div class="workforce-content">
+                <div class="workforce-image">
+                    <img src="Images/AbousUs-Page/Mondial Team.jpg" alt="Mondial Group Team">
+                </div>
+                <div class="workforce-text">
+                    <p>At the heart of our operations, a dedicated team of over <span class="highlight">50
+                            employees</span> at our headquarters forms the driving force behind Mondial Group's
+                        commitment to delivering exceptional services. Fueled by a passion for excellence, innovation,
+                        and ensuring client satisfaction, we go above and beyond to create impactful service
+                        experiences. Our unwavering dedication defines a legacy of success as we continuously evolve,
+                        striving to provide top-notch services that cater to the unique needs of diverse industries,
+                        ensuring unparalleled value and satisfaction for our clients.</p>
+
+                    <p>In conclusion, Mondial Group stands as a beacon of excellence and innovation since its
+                        establishment in 1994. With a dynamic presence in logistics, travel, overseas trading, and
+                        education, our strategic headquarters in Dubai serves as the nucleus for our operations. With a
+                        rich history, diverse portfolio, and an unwavering commitment to client satisfaction, Mondial
+                        Group continues to evolve, leaving an indelible mark on diverse industries. Our dedicated
+                        workforce, strategic partnerships, and esteemed clientele reflect our journey of success,
+                        setting industry standards and shaping the future of global business.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section id="info" role="companyInfo">
         <div class="info-container">
@@ -220,6 +244,7 @@
         </div>
     </section>
 
+    <!-- Footer Section -->
     <section class="footerr">
         <footer>
             <p> Copyright &copy; 2023 Mondial Group. All Rights Reserved. </p>
@@ -227,6 +252,7 @@
         </footer>
     </section>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

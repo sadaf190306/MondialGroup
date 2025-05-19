@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/travel_tourism.css">
+    <link rel="stylesheet" href="css/basicstyles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
+    <title>Mondial Group</title>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div id="home" class="logo-nav-container">
+            <img src="Images/Logo no bg.png" alt="Mondial Group Logo" class="logo">
+
+            <!-- Navigation Bar -->
+            <div class="nav-bar-container">
+                <nav class="nav-bar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#sectors">Our Sectors</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Icons -->
+            <div class="icons">
+                <a href="contact.html"><i class="fas fa-map-marker-alt"></i></a>
+                <a href="contact.html"></a><i class="fas fa-phone-alt"></i>
+                <i id="menu-icon" class="fa fa-bars" onclick="toggleMenu(); changeIcon(this);"></i>
+                <!-- Hamburger Icon -->
+            </div>
+        </div>
+    </header>
+
+    <video autoplay muted loop id="background-video">
+        <source src="Videos/bg.mp4" type="video/mp4">
+        <!-- Add fallback content in case the video doesn't load -->
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Hamburger Navigation Menu -->
+    <div id="hamburger-menu" class="hamburger-menu">
+        <ul>
+            <li><a href="logistics.html">Logistics</a></li>
+            <li><a href="travel_tourism.html">Travel & Tourism</a></li>
+            <li><a href="https://www.mondial.ae/trader.html" target="_blank">Trading</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="travel-services" class="travel-services-section">
+        <div class="section-header">
+            <h2>Travel & Tourism Services</h2>
+            <p>Established in 2006, our commitment to 'Total Service' drives us to seamlessly organize a comprehensive
+                range of travel & tourism-related services under one umbrella. With a focus on both domestic and
+                international travel, we extend our expertise in various services such as airline bookings, visa
+                assistance, travel insurance, and the arrangement of special flights to meet the peak season demands of
+                corporate incentive groups and religious gatherings.</p>
+        </div>
+
+        <!-- Service 1 -->
+        <div class="service-row">
+            <div class="service-text">
+                <h3>Air Ticketing</h3>
+                <p>Mondial takes pride in delivering unparalleled services to our esteemed clients, offering seamless
+                    access to Air Tickets for any destination. With a commitment to excellence, our company is dedicated
+                    to tailoring services according to your specific requirements. It would be our pleasure to be
+                    associated with you as a valued customer, ensuring a seamless and pleasurable experience for all
+                    your air travel needs. Trust Mondial for a journey that transcends expectations and exemplifies
+                    personalized service at its finest.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/air-ticketing.jpg" alt="Air Ticketing">
+            </div>
+        </div>
+
+        <!-- Service 2 - reversed layout -->
+        <div class="service-row reverse">
+            <div class="service-text">
+                <h3>Visa Services</h3>
+                <p>Mondial Travels extends a seamless visa solution for tourists aspiring to spend 30 days or more in
+                    the UAE, whether for visiting relatives or conducting business. Committed to simplifying the travel
+                    process, our main entry requirement involves providing a colored passport copy and a photograph.
+                    With a streamlined approach to visa issuance for the UAE and its seven Emirates, Mondial Travels
+                    ensures a hassle-free experience. In addition to visa services, we also offer meticulously crafted
+                    Holiday Packages, enhancing your travel experience. Choose Mondial for an unforgettable holiday,
+                    where our dedicated team ensures that every detail is taken care of, leaving you with cherished
+                    memories that last a lifetime.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/visa.jpg" alt="Visa Services">
+            </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-row">
+            <div class="service-text">
+                <h3>Ok to Board Messages</h3>
+                <p>The 'Ok to Board' message is an essential requirement for passengers traveling from India and
+                    Pakistan with Tourist visas. To facilitate a smooth process, all 'Ok to Board' requests can be
+                    submitted 48 hours prior to your scheduled departure. For guests traveling on Tourist/Short-term
+                    visas, it is imperative to possess a valid onward and return ticket, accompanied by a clear copy of
+                    the visa. This mandatory procedure ensures compliance with travel regulations and streamlines the
+                    boarding process, providing passengers with a secure and hassle-free travel experience.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/ok-to-board.jpg" alt="Air Ticketing">
+            </div>
+        </div>
+
+        <!-- Service 4 - reversed layout -->
+        <div class="service-row reverse">
+            <div class="service-text">
+                <h3>Airport Transfers</h3>
+                <p>Experience a seamless transition from the airport to your destination with our tailored Airport
+                    Transfer Services. Whether you're arriving or departing, our reliable and comfortable transportation
+                    options ensure a stress-free journey. Choose from a range of services, including private cars,
+                    shuttles, and more, all designed to provide convenience and peace of mind. Let us take care of the
+                    logistics, so you can focus on enjoying your travels from the moment you touch down. Experience
+                    seamless travel with our Airport Meet & Greet/Transfers service. Our professional team ensures a
+                    warm welcome upon arrival, providing personalized assistance through airport procedures. Enjoy a
+                    stress-free transition from the airport to your destination with our reliable and efficient transfer
+                    services, designed to enhance your travel experience from the moment you touch down.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/airport-transfers.jpg" alt="Visa Services">
+            </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-row">
+            <div class="service-text">
+                <h3>Marhaba Services</h3>
+                <p>Experience the epitome of hospitality with Marhaba Services-an exclusive meet and greet service that
+                    transforms the airport into a home away from home. From the moment you step foot in the terminal,
+                    our dedicated team ensures a seamless journey, beginning with swift fast-track clearance through
+                    arrivals or departures for both you and your loved ones. Our personalized assistance extends to
+                    various aspects of travel, including efficient transfers, streamlined baggage handling, and family
+                    travel support. Whether you're a solo traveler embarking on a business trip or enjoying a family
+                    holiday, Marhaba Services caters to your unique needs. Be it reuniting with family and friends in
+                    the arrivals area or expediting your way through all airport formalities for a hassle-free
+                    departure, we guarantee a swift, smooth, and secure passage until you reach your destination. Let
+                    Marhaba Services redefine your airport experience, ensuring that you're well looked after from
+                    touchdown to takeoff.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/marhaba-services.jpg" alt="Air Ticketing">
+            </div>
+        </div>
+
+        <!-- Service 6 - reversed layout -->
+        <div class="service-row reverse">
+            <div class="service-text">
+                <h3>Holiday Packages</h3>
+                <p>At MONDIAL GROUP, we re-define luxury travel experiences with our meticulously crafted Holiday
+                    Packages, offering you the epitome of excellence in excursions and tours to explore the best of
+                    Dubai. Beyond conventional packages, we tailor tours to meet the specific requirements of travelers
+                    and groups, whether it's catering to a particular age group, specific hobbies, or budget
+                    constraints. Our pride lies in delivering personalized services through a highly experienced and
+                    professional team, offering holiday packages coupled with (Transit & Tourist) visa services. At
+                    MONDIAL, we transform your vacation dreams into unforgettable experiences, ensuring every moment is
+                    cherished. For corporate needs, MONDIAL GROUP boasts a specially trained team dedicated to Meetings,
+                    Incentives, Conferences, Leisure, and Events in Dubai. Our flexible support services can be
+                    customized to create tailor-made packages that align with your corporate objectives and budget.
+                    Navigating the bustling airports is a seamless experience with our carefully planned Airport
+                    services. Our multilingual team is trained to attend to every tour or visit requirement, ensuring a
+                    smooth journey from start to finish. Explore Dubai in style with our widest range of Car & Limousine
+                    rental options, featuring the latest models. Choose from our fleet and elevate your travel
+                    experience with MONDIAL GROUP's commitment to excellence.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/holiday-packages.jpg" alt="Visa Services">
+            </div>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="service-row">
+            <div class="service-text">
+                <h3>Burj Khalifa</h3>
+                <p>Embark on a breathtaking journey to the skies with Burj Khalifa, an iconic marvel that has shattered
+                    world records for building height. Standing as the tallest tower globally, the Burj Khalifa is not
+                    just an architectural wonder but a symbol of Dubai's ambition and grandeur. Your extraordinary
+                    journey commences as you step into the At the Top, Burj Khalifa SKY lounge, where you will be
+                    personally escorted to a dedicated elevator. As you ascend to level 125, witness the mesmerizing
+                    view of global landmarks, giving you the sensation of soaring over the world's most iconic sites.
+                    With the recent opening of floors 124 and 145 to visitors, you can now experience the panoramic
+                    beauty of Dubai like never before. At MONDIAL GROUP, we offer exclusive special discounted rates for
+                    At the Top of Burj Khalifa tickets, ensuring that your visit to this architectural masterpiece is
+                    not only awe-inspiring but also accessible. Elevate your Dubai experience with us and witness the
+                    city's splendor from the pinnacle of modern engineering.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/burj-khalifa.jpg" alt="Air Ticketing">
+            </div>
+        </div>
+
+        <!-- Service 8 - reversed layout -->
+        <div class="service-row reverse">
+            <div class="service-text">
+                <h3>Dhow Cruise</h3>
+                <p>Embark on a captivating journey through Dubai's enchanting waterways with our Dhow Cruise
+                    experience—an unmissable adventure in the heart of the city. Picture yourself on the Dubai Creek,
+                    surrounded by the mesmerizing lights, enjoying dinner on our authentic wooden Dhow, the Dolphin.
+                    This unique experience offers a perfect blend of opulence and Bedouin tradition, creating an
+                    unforgettable evening filled with music, belly dancing, and the sip of your favorite drink alongside
+                    a delectable BBQ buffet dinner. Step aboard the Dolphin, a traditionally adorned dhow that pays
+                    homage to ancient Bedouin values. As you cruise down the shimmering creek, we extend a warm welcome
+                    with Arabic coffee (Kahweh) and present a sumptuous buffet dinner. The 2-hour dinner cruise is not
+                    just a feast for the senses but also includes a captivating belly dance show and groovy DJ music.
+                    Beyond leisure, our traditional wooden dhow, the Dolphin, serves as an exquisite venue for corporate
+                    events. Whether it's staff parties, product launches, or meetings, we offer a unique and charming
+                    setting to elevate your corporate gatherings. Join us for an unparalleled blend of luxury,
+                    tradition, and entertainment on the waters of Dubai.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/dhow-cruise.jpg" alt="Visa Services">
+            </div>
+        </div>
+
+        <!-- Service 9 -->
+        <div class="service-row">
+            <div class="service-text">
+                <h3>Desert Safari</h3>
+                <p>Embark on an enchanting desert adventure with our exquisite desert camp experience, where a
+                    traditional Arabian welcome awaits each guest. Immerse yourself in the authentic ambiance of a
+                    Bedouin campsite, adorned with traditional Arabian carpets, low tables, and comfortable cushions for
+                    seating. The journey begins in the afternoon with a thrilling desert drive through colossal golden
+                    sand dunes, deep into the heart of the desert. Witness the breathtaking sunset over the horizon,
+                    capturing beautiful photographic scenery and creating rare and cherished memories. A stop at a camel
+                    farm adds a touch of authenticity to the experience. Upon reaching the desert camp, indulge in a
+                    variety of activities, including camel rides, henna painting, trying on Arabic costumes, or simply
+                    savoring the aromatic Sheesha. The evening reaches its pinnacle with a splendid buffet dinner
+                    featuring a wide array of barbecue meats, salads, main courses, and delectable desserts. The starlit
+                    sky provides the perfect backdrop for an unforgettable performance by an exotic belly dancer,
+                    creating a magical atmosphere that lingers in your memories.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/desert-safari.jpg" alt="Air Ticketing">
+            </div>
+        </div>
+
+        <!-- Service 10 - reversed layout -->
+        <div class="service-row reverse">
+            <div class="service-text">
+                <h3>Sky Diving</h3>
+                <p>Embark on an exhilarating adventure at a cheaper price with our Tandem Skydiving Dubai Ticket Booking
+                    Reservation Services. Offering a seamless and thrilling experience, our services cater to both
+                    thrill-seekers and first-time skydivers looking to create unforgettable memories in the stunning
+                    backdrop of Dubai.</p>
+
+                <h4>Key Features:</h4>
+                <ul>
+                    <li><strong>Expert Guidance:</strong> Enjoy the confidence of jumping in tandem with highly trained
+                        and experienced instructors who ensure your safety and guide you through every step of the jump.
+                    </li>
+                    <li><strong>Convenient Booking:</strong> Our user-friendly online reservation platform allows you to
+                        easily book your Tandem Skydiving Dubai experience at your convenience. Choose your preferred
+                        date and time, and secure your spot with just a few clicks.</li>
+                    <li><strong>Personalized Assistance:</strong> Our dedicated reservation team is ready to provide
+                        personalized assistance at a cheaper price, addressing any queries and ensuring a smooth booking
+                        process.</li>
+                    <li><strong>Flexible Packages:</strong> Explore a range of flexible packages tailored to meet your
+                        preferences, including options for capturing your jump with professional photos and videos.</li>
+                    <li><strong>Scenic Views:</strong> Soar above the iconic Dubai skyline and Palm Jumeirah, enjoying
+                        breathtaking views during your tandem skydiving experience.</li>
+                    <li><strong>Safety Assurance:</strong> Rest easy with our commitment to the highest safety
+                        standards, ensuring a secure and memorable adventure.</li>
+                </ul>
+
+                <p>Book your Tandem Skydiving Dubai experience today and elevate your sense of adventure to new heights
+                    with our seamless ticket booking and reservation services.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/sky-diving.jpg" alt="Visa Services">
+            </div>
+        </div>
+
+        <!-- Service 11 -->
+        <div class="service-row">
+            <div class="service-text">
+                <h3>Hotel Booking</h3>
+                <p>Experience effortless travel planning with our Hotel Booking Services. From luxurious retreats to
+                    budget-friendly accommodations, our user-friendly platform allows you to discover and reserve the
+                    perfect stay tailored to your preferences. Enjoy a seamless booking process, exclusive deals, and a
+                    wide array of options worldwide. Elevate your travel experience with our commitment to providing
+                    hassle-free and personalized hotel reservations, ensuring your journey is as comfortable as your
+                    destination.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/hotel-booking.jpg" alt="Air Ticketing">
+            </div>
+        </div>
+
+        <!-- Service 12 - reversed layout -->
+        <div class="service-row reverse">
+            <div class="service-text">
+                <h3>Travel Insurance</h3>
+                <p>MONDIAL GROUP has a specially trained team to cater to your Meetings, Incentives, Conferences,
+                    Leisure and Events requirements in Dubai . Our spectrum of support services is flexible and
+                    adaptable for any corporate custom design package. We can help and organize your company's
+                    requirements based on your objectives and budget.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/travel-insurance.jpg" alt="Visa Services">
+            </div>
+        </div>
+
+        <!-- Service 13 -->
+        <div class="service-row">
+            <div class="service-text">
+                <h3>Excursions / Tour Packages</h3>
+                <p>Embark on unforgettable journeys with MONDIAL GROUP's Excursions and Tour Packages, meticulously
+                    crafted to showcase the best of Dubai. Our world-class offerings cater to diverse preferences,
+                    providing tailored tours for individuals and groups. Whether you seek age-specific adventures,
+                    hobby-centric explorations, or budget-friendly options, we curate experiences that go beyond
+                    expectations, ensuring every moment in Dubai is extraordinary.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/tour-packages.jpg" alt="Air Ticketing">
+            </div>
+        </div>
+
+        <!-- Service 14 - reversed layout -->
+        <div class="service-row reverse">
+            <div class="service-text">
+                <h3>Car & Limo Rental</h3>
+                <p>Experience seamless travel with our premium Car & Limo Rental service. Choose from a fleet of
+                    meticulously maintained vehicles, ranging from luxury cars to spacious limousines, ensuring comfort
+                    and style for every journey. Whether for business or leisure, our rental service offers reliability,
+                    convenience, and a touch of sophistication, making transportation an effortless part of your
+                    experience.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/car-rental.jpg" alt="Visa Services">
+            </div>
+        </div>
+
+        <!-- Service 15 -->
+        <div class="service-row">
+            <div class="service-text">
+                <h3>International & Domestic Ticketing</h3>
+                <p>Drawing on over a decade of experience, we introduced the pioneering concept of 'most economical
+                    fares,' ensuring our customers benefit from cost-effective travel solutions. Our dedicated and
+                    professional staff is adept at handling all ticketing requirements with precision and efficiency.
+                </p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/domestic-ticketing.jpg" alt="Air Ticketing">
+            </div>
+        </div>
+
+        <!-- Service 16 - reversed layout -->
+        <div class="service-row reverse">
+            <div class="service-text">
+                <h3>Holiday Packages & Visa Services</h3>
+                <p>We take pride in our ability to provide personalized services through a highly experienced and
+                    professional team. Our holiday packages, coupled with comprehensive transit and tourist visa
+                    services, are tailored to turn your dream vacation into an unforgettable experience. At MONDIAL, we
+                    strive to make every journey remarkable, offering a perfect blend of convenience, expertise, and
+                    personalized care.</p>
+            </div>
+            <div class="service-image">
+                <img src="Images/travel-tourism-page/holiday-visa-packages.jpg" alt="Visa Services">
+            </div>
+        </div>
+    </section>
+
+    <section id="info" role="companyInfo">
+        <div class="info-container">
+            <!--Business hours-->
+            <div class="business-hours">
+                <h2>BUSINESS HOURS</h2>
+                <p>8.00 AM to 6.00 PM - Monday</p>
+                <p>8.00 AM to 6.00 PM - Tuesday</p>
+                <p>8.00 AM to 6.00 PM - Wednesday</p>
+                <p>8.00 AM to 6.00 PM - Thursday</p>
+                <p>8.00 AM to 6.00 PM - Friday</p>
+                <p>8.00 AM to 4.00 PM - Saturday</p>
+                <p>Holiday - Sunday</p>
+            </div>
+
+            <!--Company-->
+            <div class="company">
+                <h2>COMPANY</h2>
+                <p>Home</p>
+                <p>About Us</p>
+                <p>Contact Us</p>
+                <p>Services</p>
+            </div>
+
+            <!--Address-->
+            <div class="address">
+                <h2>ADDRESS</h2>
+                <p>P.O.BOX 22974</p>
+                <p>DUBAI INTERNATIONAL AIRPORT</p>
+                <p>ROAD, Dubai - U.A.E</p>
+                <p>Phone: +971 4 2869203</p>
+                <p>Fax: +971 4 2869204</p>
+                <p>Mail: admin1@mondial.ae</p>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="social-media">
+                <h2>OUR LINKS</h2>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="footerr">
+        <footer>
+            <p> Copyright &copy; 2023 Mondial Group. All Rights Reserved. </p>
+            <p> Designed by <b> TechSmart </b></p>
+        </footer>
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="basicstyles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/basicstyles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inria+Serif&display=swap" rel="stylesheet">
     <title>Mondial Group</title>
@@ -15,25 +15,26 @@
 
     <!-- Header Section -->
     <header>
-        <div  id = "home" class="logo-nav-container">
+        <div id="home" class="logo-nav-container">
             <img src="Images/Logo no bg.png" alt="Mondial Group Logo" class="logo">
 
             <!-- Navigation Bar -->
             <div class="nav-bar-container">
                 <nav class="nav-bar">
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#sectors">Our Sectors</a></li>
-                        <li><a href="#services">Services</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#sectors">Our Sectors</a></li>
+                        <li><a href="index.html#services">Services</a></li>
                     </ul>
                 </nav>
             </div>
 
+
             <!-- Icons -->
             <div class="icons">
-                <i class="fas fa-map-marker-alt"></i>
-                <i class="fas fa-phone-alt"></i>
+                <a href="contact.html"><i class="fas fa-map-marker-alt"></i></a>
+                <a href="contact.html"></a><i class="fas fa-phone-alt"></i>
                 <i id="menu-icon" class="fa fa-bars" onclick="toggleMenu(); changeIcon(this);"></i>
                 <!-- Hamburger Icon -->
             </div>
@@ -49,11 +50,11 @@
     <!-- Navigation (Hamburger) Menu Section -->
     <div id="hamburger-menu" class="hamburger-menu">
         <ul>
-            <li><a href="#logistics">Logistics</a></li>
-            <li><a href="#tourism">Travel & Tourism</a></li>
-            <li><a href="#trading">Trading</a></li>
-            <li><a href="#careers">Careers</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="logistics.html">Logistics</a></li>
+            <li><a href="travel_tourism.html">Travel & Tourism</a></li>
+            <li><a href="https://www.mondial.ae/trader.html" target="_blank">Trading</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </div>
 
@@ -65,7 +66,7 @@
     </section>
 
 
-    <section id = "services" class="section services-section">
+    <section id="services" class="section services-section">
         <h1>Our Services</h1>
         <p>We offer a wide range of quality services to meet your needs.</p>
 
@@ -121,7 +122,7 @@
         </div>
     </section>
 
-    <section id =  "about" class="section about-section">
+    <section id="about" class="section about-section">
         <div class="about-content">
             <div class="about-text">
                 <h1>ABOUT US</h1>
@@ -144,7 +145,7 @@
     </section>
 
 
-    <section id = "sectors" class="section sectors-section">
+    <section id="sectors" class="section sectors-section">
         <div class="image-container">
             <div class="image-box">
                 <div class="flip-card">
@@ -154,7 +155,10 @@
                             <h3>LOGISTICS</h3>
                         </div>
                         <div class="flip-card-back">
-                            <p>Justifiably, our successful growth since being established in 1994, has been attributed to a well-defined goal, strategic planning, dynamic leadership and a team of self motivated and well experienced professionals, trained to give the best in ultimate customer satisfaction.</p>
+                            <p>Justifiably, our successful growth since being established in 1994, has been attributed
+                                to a well-defined goal, strategic planning, dynamic leadership and a team of self
+                                motivated and well experienced professionals, trained to give the best in ultimate
+                                customer satisfaction.</p>
                         </div>
                     </div>
                 </div>
@@ -168,7 +172,10 @@
                             <h3>TRAVEL & TOURISM</h3>
                         </div>
                         <div class="flip-card-back">
-                            <p>Established in 2006, our commitment to 'Total Service' drives us to seamlessly organize a comprehensive range of travel-related services under one umbrella. MONDIAL has embarked upon the journey to provide world class excursions and tour packages for everyone who wishes to explore UAE.</p>
+                            <p>Established in 2006, our commitment to 'Total Service' drives us to seamlessly organize a
+                                comprehensive range of travel-related services under one umbrella. MONDIAL has embarked
+                                upon the journey to provide world class excursions and tour packages for everyone who
+                                wishes to explore UAE.</p>
                         </div>
                     </div>
                 </div>
@@ -182,7 +189,9 @@
                             <h3>TRADING</h3>
                         </div>
                         <div class="flip-card-back">
-                            <p>Established in 2012, Mondial Trading with an outstanding business is the result of a combination of delivering high quality products with our unmatched logistics support.</p>
+                            <p>Established in 2012, Mondial Trading with an outstanding business is the result of a
+                                combination of delivering high quality products with our unmatched logistics support.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -288,7 +297,7 @@
         </footer>
     </section>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
