@@ -36,3 +36,40 @@
 .career-cta a:hover {
     color: #0055aa;
 }
+
+@media (min-width: 720px) and (max-width: 768px) {
+
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100%;
+    }
+}
+
+@media (max-width: 721px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    
+    .careers-content {
+        width: 75%;
+        margin-right: 20px;
+    }
+
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* adds space between sections */
+        padding: 20px 10px;
+    }
+    
+    .info-container > div {
+        width: 100%;
+        text-align: left;
+    }
+
+
+}
+
