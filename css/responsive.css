@@ -1,0 +1,231 @@
+/* ===============================
+   Responsiveness Styles (Tabs)
+   =============================== */
+@media (max-width: 768px) {
+
+    /* Hide full horizontal nav on small screens */
+    .nav-bar {
+        display: none;
+    }
+
+    /* Show only the logo and hamburger icon on top */
+    .logo-nav-container {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Show hamburger menu icon */
+    #menu-icon {
+        display: flex;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+    }
+
+    /* Style the hamburger dropdown menu */
+    #hamburger-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        /* adjust according to your header height */
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.9);
+        border-radius: 8px;
+        padding: 15px;
+        width: 200px;
+        z-index: 1000;
+    }
+
+    #hamburger-menu.active {
+        display: block;
+        flex-direction: column;
+    }
+
+    .hamburger-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+        padding-right: 20px;
+        z-index: 1001;
+    }
+
+    #hamburger-menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #hamburger-menu ul li {
+        text-align: center;
+    }
+
+    #hamburger-menu ul li a {
+        display: block;
+        color: white;
+        padding: 10px 0;
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: 600;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    #hamburger-menu ul li:last-child a {
+        border-bottom: none;
+    }
+
+    /* Adjust logo size for small screens if needed */
+    .logo {
+        margin-top: 10px;
+        width: 200px;
+        height: auto;
+    }
+
+    #hamburger-menu .home-link {
+        display: list-item;
+        /* or block */
+    }
+
+    #info {
+        padding: 0px;
+        text-align: center;
+        gap: 0px;
+    }
+
+    #info h2 {
+        font-size: 1.5rem;
+    }
+
+    #info ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    #info li {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .business-hours p,
+    .address p {
+        font-size: 1rem;
+        line-height: 1;
+        /* increases vertical spacing */
+        white-space: nowrap;
+        /* prevents text from breaking into two lines */
+    }
+
+    .social-icons {
+        margin-right: 60px;
+        margin-left: 20px;
+    }
+
+    .business-hours {
+        margin-left: 30px;
+        margin-right: 50px;
+    }
+
+    .address {
+        margin-right: 0px;
+    }
+}
+
+/* ===============================
+   Responsiveness Styles (Mobile)
+   =============================== */
+
+@media (max-width: 320px) {
+
+    /* Hide location/contact icons on mobile */
+    .icons a {
+        display: none;
+    }
+    
+    #info {
+        padding: 0px;
+    }
+
+    .info-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 0px;
+        text-align: center;
+    }
+
+    .info-container > div {
+        flex: 1 1 25%; /* 4 equal sections */
+        min-width: 60px;
+    }
+
+    .business-hours h2 {
+        white-space: nowrap;
+        text-transform: none; /* In case you have uppercase elsewhere */
+        font-weight: 600; /* Optional: keep it bold */
+        font-size: 0.8rem; /* Adjust if needed */
+    }
+
+    #info h2 {
+        font-size: 0.7rem;
+        margin-bottom: 5px;
+    }
+
+    #info p {
+        font-size: 0.8rem;
+        margin: 2px 0;
+    }
+
+    .business-hours,
+    .company,
+    .address,
+    .social-media {
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    .business-hours,
+    .address {
+        margin-right: 120px;
+        margin-left: 10px;
+    }
+
+    .company p{
+        line-height: 1;
+    }
+
+    .social-media a {
+        font-size: 0.7rem;
+        margin: 0 2px;
+    }
+
+    footer {
+        bottom: 0;
+        width: 100%;
+        font-size: 0.5rem;
+        line-height: 1;
+        white-space: normal;  /* allow wrapping */
+        padding: 5px 10px;    /* add some padding so text isn’t squished */
+        box-sizing: border-box; /* include padding in width */
+        overflow-wrap: break-word; /* ensure long words break if needed */
+        word-wrap: break-word;     /* older fallback */
+        word-break: break-word;    /* more aggressive word breaking */
+    }
+}
+
+/* ===============================
+   Responsiveness Styles (Desktop)
+   =============================== */
+
+@media (min-width: 769px) {
+    #hamburger-menu .home-link {
+        display: none;
+    }
+}
