@@ -73,10 +73,6 @@
     border: 1px solid #f5c6cb;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 body,
 html {
     margin: 0;
@@ -87,9 +83,6 @@ html {
 /* Responsive Styles */
 /* Tablet styles */
 @media (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
 
     /* Contact Section */
     .contact-container {
@@ -97,6 +90,12 @@ html {
         align-items: center;
         padding: 20px;
         box-sizing: border-box;
+    }
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
     }
 
     .contact-form,
@@ -107,47 +106,29 @@ html {
         margin-bottom: 20px;
     }
 
+    .contact-form h2 {
+        margin-top: -50px;
+    }
+
     iframe {
         height: 300px;
         width: 100%;
     }
 
-    /* Info Section */
-    .info-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 20px;
-        padding: 0 20px;
-    }
-
-    .business-hours,
-    .company,
-    .address {
-        flex: 1 1 calc(33.33% - 20px);
-        min-width: 200px;
-    }
-
-    .social-media {
-        flex: 1 1 100%;
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .social-media a {
-        margin: 0 8px;
-        font-size: 20px;
-    }
-
-    /* Footer */
-    .footerr footer {
-        padding: 15px;
-        font-size: 14px;
-        text-align: center;
+    .contact-section {
+        height: 800px;
     }
 }
 
+/* Phone styles */
 @media (max-width: 320px) {
+
+    body, html {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
     .contact-form input,
     .contact-form textarea,
     .contact-form button {
@@ -158,6 +139,7 @@ html {
 
     .contact-form h2 {
         font-size: 18px;
+        margin-top: -50px;
     }
 
     .contact-form p {
@@ -168,25 +150,7 @@ html {
         height: 200px;
     }
 
-    .info-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 20px 10px;
-    }
-
-    .info-container>div {
-        width: 100%;
-        text-align: center;
-    }
-
-    .footerr footer {
-        font-size: 12px;
-        padding: 10px;
-    }
-
-    .social-media a {
-        margin: 0 5px;
-        font-size: 18px;
+    .contact-section {
+        height: 700px;
     }
 }

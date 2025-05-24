@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <div class="service-content">
                 <h3>${service.title}</h3>
-                <p>${service.description}</p>
+                <p class="service-description">${service.description}</p>
                 <ul class="service-details">
                     ${service.details.map(detail => `<li>${detail}</li>`).join('')}
                 </ul>

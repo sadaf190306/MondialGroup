@@ -53,3 +53,68 @@
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
+.service-image img:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* ===== Tablet (max-width 768px) ===== */
+
+@media (max-width: 768px) {
+    html,body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .service-row {
+        flex-direction: column;
+    }
+
+    .service-row.reverse {
+        flex-direction: column;
+    }
+
+    .service-text,
+    .service-image {
+        padding: 0.5rem;
+    }
+
+    .service-text h3 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .service-text p {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+}
+
+/* ===== Small Phone (max-width 480px) ===== */
+
+@media (max-width: 480px) {
+    html,body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+    
+    .travel-services-section {
+        padding: 2rem 0rem;
+    }
+
+    .service-row, .service-row.reverse {
+        padding-left: -10%;
+        padding-right: 20%;
+    }
+
+    .service-text h3 {
+        margin-top: 0;
+    }
+
+    .service-image img {
+        margin-bottom: 0px;
+    }
+}

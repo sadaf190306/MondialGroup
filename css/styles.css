@@ -294,10 +294,6 @@
         width: 100%;
     }
 
-    * {
-        box-sizing: border-box;
-    }
-
     #background-video {
         width: 100vw;
         max-width: 100%;
@@ -318,7 +314,6 @@
 
     .about-section {
         padding: 30px 20px;
-
     }
 
     .about-section h1 {
@@ -345,7 +340,6 @@
         height: auto;
         margin-bottom: 30px;
     }
-
 
     .clients-section h2 {
         font-size: 2em;
@@ -408,54 +402,92 @@
         overflow-x: hidden;
     }
 
-    .about-section h1 {
-        font-size: 30px;
+    .about-section {
+        width: 100%;
+        margin-left: 0 auto;
+        padding: 0 15px;
+    }
 
+    .about-section h1 {
+        font-size: 1.2rem;
     }
 
     .about-section p {
-        font-size: 16px;
+        font-size: 0.8rem;
         line-height: 1.6;
         margin-bottom: 10px;
     }
 
-    .image-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+    .services-section h1 {
+        font-size: 1.2rem;
     }
 
-    .image-box {
-        width: 90%;
-        max-width: 320px;
+    .services-section p {
+        font-size: 0.8rem;
     }
 
-    .flip-card-back p {
-        font-size: 0.9rem;
-        padding: 10px;
+    .services-container {
+        width: 100%;
+        align-items: left;
     }
 
-    .read-more {
-        margin-top: 8px;
-        padding: 6px 12px;
-        font-size: 0.9rem;
+    .service-card {
+        max-width: 100px;
+        min-width: 250px;
     }
 
-    .info-container {
+    .service-card img {
+        width: 100%;
+    }
+
+    #sectors .image-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 20px;
-        /* adds space between sections */
-        padding: 20px 10px;
     }
 
-    .info-container>div {
+    #sectors .image-box {
         width: 100%;
-        text-align: left;
+        max-width: 300px;
+        margin-bottom: 30px;
+        margin-top: -100px;
     }
 
-    .video-container{
+    #sectors .flip-card {
+        perspective: none;
+    }
+
+    #sectors .flip-card-back {
+        width: 50%;
+        display: flex;
+        font-size: small;
+        flex-direction: column;
+        margin-left: 70px;
+        text-align: center;  
+    }
+
+    .clients-section{
+        margin-top: 250px;
+    }
+
+    .flip-card-front img {
+        width: 60%;
+        height: auto;
+        margin-top: 70px;
+    }
+
+    #sectors .flip-card-front h3 {
+        font-size: 1rem;
+        margin-top: 5px;
+        margin-bottom:-50px;
+    }
+
+    #sectors .read-more {
+        font-size: 0.9rem;
+        align-self: center;
+    }
+
+    .video-container {
         display: none !important;
     }
 }
