@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname)));
 
 // Fallback for any other route - send index.html or 404
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Connect to MongoDB
@@ -59,19 +59,18 @@ app.post('/api/contact', async (req, res) => {
             }
         });
 
-
         const mailOptions = {
             from: email,
             to: 'fatimasadaf68@gmail.com',
             subject: `New Contact Message from ${name}`,
             html: `
-        <h3>New Contact Form Submission</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Subject:</strong> ${subject || 'N/A'}</p>
-        <p><strong>Mobile:</strong> ${mobile || 'N/A'}</p>
-        <p><strong>Message:</strong><br>${message}</p>
-      `
+                <h3>New Contact Form Submission</h3>
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Subject:</strong> ${subject || 'N/A'}</p>
+                <p><strong>Mobile:</strong> ${mobile || 'N/A'}</p>
+                <p><strong>Message:</strong><br>${message}</p>
+            `
         };
 
         await transporter.sendMail(mailOptions);
@@ -79,8 +78,8 @@ app.post('/api/contact', async (req, res) => {
         res.status(200).json({ message: 'Message received and emailed successfully!' });
 
     } catch (err) {
-        console.error('Error:', err);
-        res.status(500).json({ error: 'Server error, please try again later.' });
+        console.error('Error sending email:', err);  // <--- Update this line
+        res.status(500).json({ error: 'Failed to send message. Please try again later.' });
     }
 });
 
