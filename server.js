@@ -6,11 +6,20 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const path = require('path');
 
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
 require('dotenv').config();
+
+// Serve static files from current directory (root)
+app.use(express.static(path.join(__dirname)));
+
+// Fallback for any other route - send index.html or 404
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI)
