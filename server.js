@@ -78,9 +78,16 @@ app.post('/api/contact', async (req, res) => {
         res.status(200).json({ message: 'Message received and emailed successfully!' });
 
     } catch (err) {
-        console.error('Error sending email:', err);  // <--- Update this line
-        res.status(500).json({ error: 'Failed to send message. Please try again later.' });
+        console.error('Error sending email:', err);
+        if (err.response) {
+            console.error('SMTP response:', err.response);
+        }
+        if (err.stack) {
+            console.error('Stack trace:', err.stack);
+        }
+        res.status(500).json({ error: 'Server error, please try again later.' });
     }
+
 });
 
 // Start server
