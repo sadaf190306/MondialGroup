@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 require('dotenv').config();
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/mondial')
+mongoose.connect(process.env.MONGODB_URI)
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
 
@@ -53,7 +53,7 @@ app.post('/api/contact', async (req, res) => {
 
         const mailOptions = {
             from: email,
-            to: process.env.EMAIL_USER,
+            to: 'admin@mondial.ae',
             subject: `New Contact Message from ${name}`,
             html: `
         <h3>New Contact Form Submission</h3>
