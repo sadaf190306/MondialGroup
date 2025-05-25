@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
@@ -12,10 +13,9 @@ const path = require('path');
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-require('dotenv').config();
 
 // Serve static files from current directory (root)
-app.use(express.static(path.join(__dirname)));
+app.use(express.static(__dirname));
 
 // Fallback for any other route - send index.html or 404
 app.get('*', (req, res) => {
@@ -93,5 +93,5 @@ app.post('/api/contact', async (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+    console.log(`Server running on port ${PORT}`);
 });
